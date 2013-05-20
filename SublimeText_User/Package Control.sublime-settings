@@ -1,0 +1,14 @@
+{
+	"installed_packages":
+	[
+		"EditorConfig",
+		"Function Name Display",
+		"Package Control",
+		"sublime_alignment"
+	],
+	"repositories":
+	[
+		"https://github.com/sindresorhus/editorconfig-sublime/tree/st3",
+		"https://github.com/wbond/sublime_alignment"
+	]
+}
