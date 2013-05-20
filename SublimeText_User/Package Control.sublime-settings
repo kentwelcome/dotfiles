@@ -4,7 +4,8 @@
 		"EditorConfig",
 		"Function Name Display",
 		"Package Control",
-		"sublime_alignment"
+		"sublime_alignment",
+		"VAlign"
 	],
 	"repositories":
 	[
