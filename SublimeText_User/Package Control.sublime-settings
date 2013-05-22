@@ -5,13 +5,12 @@
 		"Function Name Display",
 		"HexViewer",
 		"Package Control",
-		"sublime_alignment",
+		"PlainTasks",
+		"Pretty JSON",
 		"VAlign"
 	],
 	"repositories":
 	[
 		"https://github.com/sindresorhus/editorconfig-sublime/tree/st3",
-		"https://github.com/wbond/sublime_alignment",
-		"https://github.com/facelessuser/HexViewer/tree/ST3"
-	]
+		"https://github.com/facelessuser/HexViewer/tree/ST3"	]
 }
