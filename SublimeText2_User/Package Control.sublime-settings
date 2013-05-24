@@ -1,12 +1,20 @@
 {
 	"installed_packages":
 	[
+		"AAAPackageDev",
+		"AutoFileName",
 		"EditorConfig",
 		"Function Name Display",
 		"HexViewer",
+		"objc .strings syntax language",
 		"Package Control",
 		"PlainTasks",
 		"Pretty JSON",
+		"SublimeCodeIntel",
 		"VAlign"
+	],
+	"repositories":
+	[
+		"https://github.com/quarnster/SublimeClang"
 	]
 }
