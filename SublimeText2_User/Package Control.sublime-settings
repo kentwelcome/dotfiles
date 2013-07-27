@@ -3,6 +3,8 @@
 	[
 		"AAAPackageDev",
 		"AutoFileName",
+		"completion",
+		"CTags",
 		"EditorConfig",
 		"Function Name Display",
 		"HexViewer",
@@ -15,6 +17,7 @@
 	],
 	"repositories":
 	[
-		"https://github.com/quarnster/SublimeClang"
+		"https://github.com/quarnster/SublimeClang",
+		"https://github.com/quarnster/completion"
 	]
 }
