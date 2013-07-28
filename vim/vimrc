@@ -2,8 +2,8 @@
 " Kent Huang <kentwelcome@gmail.com>
 
 " For pathogen.vim: auto load all plugins in .vim/bundle
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" call pathogen#runtime_append_all_bundles()
+" call pathogen#helptags()
 
 " General Settings
 
@@ -95,23 +95,34 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 "--------------------------------------------------------------------------- 
 " PLUGIN SETTINGS
 "--------------------------------------------------------------------------- 
+filetype off                   " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
 
-" ------- vim-latex - many latex shortcuts and snippets {
+" My Bundles here:
+"
+" original repos on github
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'vim-scripts/cscope.vim'
+Bundle 'vim-scripts/ctags.vim'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'wesleyche/SrcExpl'
+Bundle 'wesleyche/Trinity'
+Bundle 'vim-scripts/AutoComplPop'
+Bundle 'vim-scripts/snipMate'
+Bundle 'vim-scripts/neocomplcache'
+Bundle 'vim-scripts/fakeclip'
+Bundle 'vim-scripts/surround.vim'
+Bundle 'c9s/bufexplorer'
+ 
 
-" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-" can be called correctly.
-set shellslash
-set grepprg=grep\ -nH\ $*
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
-
-"}
-
+filetype plugin indent on     " required!
+ 
 set autoindent
-let python_highlight_all = 1
 set number
 nnoremap <F2> :set nonumber!<CR>
 
