@@ -29,7 +29,9 @@ if has("gui_running")
 	set cursorline        	" highlight current line
 	highlight CursorLine	guibg=#003853 ctermbg=24  gui=none cterm=none
 else    
-        set mouse=nich
+        set cursorline
+        set t_Co=256
+        " set mouse=nich
 endif
 
 set clipboard=unnamed	" yank to the system register (*) by default
