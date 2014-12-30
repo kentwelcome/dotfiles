@@ -109,13 +109,8 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-<<<<<<< Updated upstream
-" Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-scripts/cscope.vim'
-=======
 "Bundle 'vim-scripts/cscope.vim'
 Bundle 'chazy/cscope_maps'
->>>>>>> Stashed changes
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'wesleyche/SrcExpl'
