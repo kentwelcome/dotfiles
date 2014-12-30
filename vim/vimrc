@@ -31,6 +31,8 @@ if has("gui_running")
 else    
         set cursorline
         set t_Co=256
+	highlight CursorLine	guibg=#003853 ctermbg=24  gui=none cterm=none
+	highlight Visual        guibg=#003853 ctermbg=24  gui=none cterm=none
         " set mouse=nich
 endif
 
