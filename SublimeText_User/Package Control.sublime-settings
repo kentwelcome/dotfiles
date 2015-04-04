@@ -1,18 +1,25 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
+		"All Autocomplete",
 		"api-blueprint-sublime-plugin",
 		"BracketHighlighter",
 		"Cscope",
 		"CTags",
 		"EditorConfig",
 		"Function Name Display",
+		"Git",
 		"HexViewer",
 		"Markdown Extended",
 		"Package Control",
 		"PlainTasks",
 		"Pretty JSON",
 		"Python Breakpoints",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
 		"Theme - Soda",
 		"VAlign"
 	],
@@ -20,6 +27,7 @@
 	[
 		"https://github.com/sindresorhus/editorconfig-sublime/tree/st3",
 		"https://github.com/facelessuser/HexViewer/tree/ST3",
-		"https://github.com/apiaryio/api-blueprint-sublime-plugin"
+		"https://github.com/apiaryio/api-blueprint-sublime-plugin",
+		"https://github.com/SublimeText/CTags"
 	]
 }
