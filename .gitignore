@@ -2,3 +2,7 @@
 vim/.netrwhist
 vim/bundle
 *.swp
+SublimeText_User/Package Control.merged-ca-bundle
+SublimeText_User/Package Control.system-ca-bundle
+SublimeText_User/Package Control.user-ca-bundle
+SublimeText_User/bh_unicode_properties.cache
