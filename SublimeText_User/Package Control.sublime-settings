@@ -7,7 +7,9 @@
 		"All Autocomplete",
 		"api-blueprint-sublime-plugin",
 		"BracketHighlighter",
+		"CMake",
 		"Cscope",
+		"CscopeSublime",
 		"CTags",
 		"EditorConfig",
 		"Function Name Display",
@@ -28,6 +30,7 @@
 		"https://github.com/sindresorhus/editorconfig-sublime/tree/st3",
 		"https://github.com/facelessuser/HexViewer/tree/ST3",
 		"https://github.com/apiaryio/api-blueprint-sublime-plugin",
-		"https://github.com/SublimeText/CTags"
+		"https://github.com/SublimeText/CTags",
+		"https://github.com/ameyp/CscopeSublime"
 	]
 }

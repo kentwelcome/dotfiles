@@ -1,16 +1,22 @@
 {
-    "color_scheme": "Packages/User/Monokai Soda.tmTheme",
-    "dictionary": "Packages/Language - English/en_US.dic",
-    "draw_white_space": "all",
-    "ensure_newline_at_eof_on_save": true,
-    "font_face": "Source Code Pro",
-    "font_size": 16,
-    "highlight_line": true,
-    "ignored_packages":
-    [
-        "Python Breakpoints"
-    ],
-    "soda_folder_icons": true,
-    "theme": "Soda Dark 3.sublime-theme",
-    "translate_tabs_to_spaces": true
+	"color_scheme": "Packages/User/Monokai Soda.tmTheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Source Code Pro",
+	"font_size": 14,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Python Breakpoints",
+		"Cscope"
+	],
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"/Users/kent/Research/TrendMicro/VSAPI/9830/llvm/src/filter/95*"
+	],
+	"soda_folder_icons": true,
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_tabs_to_spaces": true
 }
