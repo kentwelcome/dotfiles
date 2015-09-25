@@ -1,15 +1,15 @@
 {
-	"color_scheme": "Packages/User/Monokai Soda.tmTheme",
+	"color_scheme": "Packages/User/IR_Black.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Source Code Pro",
-	"font_size": 14,
+	"font_size": 13,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Python Breakpoints",
-		"Cscope"
+		"Cscope",
+		"Python Breakpoints"
 	],
 	"index_exclude_patterns":
 	[
