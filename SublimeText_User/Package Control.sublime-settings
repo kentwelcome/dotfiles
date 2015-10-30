@@ -5,6 +5,8 @@
 	],
 	"installed_packages":
 	[
+		"1337 Color Scheme",
+		"Alignment",
 		"All Autocomplete",
 		"api-blueprint-sublime-plugin",
 		"BracketHighlighter",
@@ -13,8 +15,11 @@
 		"CscopeSublime",
 		"CTags",
 		"EditorConfig",
+		"FileHeader",
+		"fish-shell",
 		"Function Name Display",
 		"Git",
+		"Git-StatusBar",
 		"HexViewer",
 		"LiveScript",
 		"Markdown Extended",
@@ -24,6 +29,8 @@
 		"Python Breakpoints",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-clang",
 		"Theme - Primer",
 		"Theme - Soda",
 		"VAlign"
