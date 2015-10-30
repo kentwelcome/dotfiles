@@ -1,11 +1,11 @@
 #! /bin/bash
 
 if [ ! -d ~/config/fish ]; then
-    mkdir -p ~/config/fish
+    mkdir -p ~/.config/fish
 fi
 
 if [ -f ~/.config/fish/config.fish ]; then
-    echo "config.fish already exist"
+    echo ".config.fish already exist"
     exit
 fi
 
