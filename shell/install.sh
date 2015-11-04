@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # @Author: Kent Huang
 # @Date:   2015-11-05 00:00:52
 # @Last Modified by:   Kent Huang

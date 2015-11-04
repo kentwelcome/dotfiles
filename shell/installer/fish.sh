@@ -23,9 +23,9 @@ if [ -f ~/.config/fish/config.fish ]; then
     exit
 fi
 
-if [ $OS_TYPE == "Linux" ]; then
+if [ "$OS_TYPE" = "Linux" ]; then
     ln -s $module_dir/config.linux.fish ~/.config/fish/config.fish
-elif [ $OS_TYPE == "Darwin" ]; then
+elif [ "$OS_TYPE" = "Darwin" ]; then
     ln -s $module_dir/config.mac.fish ~/.config/fish/config.fish
 fi
 

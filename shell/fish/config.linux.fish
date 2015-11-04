@@ -10,4 +10,5 @@ function fish_prompt
 end
 
 # NVM Fish Wrapper
-source ~/.config/fish/nvm-wrapper/nvm.fish
+. ~/.config/fish/nvm-wrapper/nvm.fish
+
