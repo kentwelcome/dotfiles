@@ -1,10 +1,10 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/primer.dark (SL).tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Source Code Pro",
-	"font_size": 14,
+	"font_size": 12,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -16,6 +16,6 @@
 		"*.log",
 		"/Users/kent/Research/TrendMicro/VSAPI/9830/llvm/src/filter/95*"
 	],
-	"theme": "Primer Dark.sublime-theme",
+	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
