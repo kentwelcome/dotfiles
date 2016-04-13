@@ -16,6 +16,8 @@ ln -s `pwd`/vim ~/.vim
 echo "Link vimrc to ~/.vimrc"
 ln -s `pwd`/vim/vimrc ~/.vimrc
 
-echo "Install ctags and cscope"
-sudo apt-get install ctags cscope
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    echo "Install ctags and cscope"
+    sudo apt-get install ctags cscope
+fi
 

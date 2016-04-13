@@ -25,7 +25,7 @@ colorscheme ir_black
 if has("gui_running")
 	set t_Co=256
 	"set guifont=Monaco:h14
-	set guifont=Monaco\ for\ Powerline:h14
+	set guifont=Monaco\ for\ Powerline:h12
 	set cursorline        	" highlight current line
 	highlight CursorLine	guibg=#003853 ctermbg=24  gui=none cterm=none
 else    
