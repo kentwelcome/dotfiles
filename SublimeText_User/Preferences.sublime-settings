@@ -8,8 +8,7 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Cscope",
-		"Python Breakpoints"
+		"Cscope"
 	],
 	"index_exclude_patterns":
 	[
@@ -17,5 +16,6 @@
 		"/Users/kent/Research/TrendMicro/VSAPI/9830/llvm/src/filter/95*"
 	],
 	"theme": "Primer Dark.sublime-theme",
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+	"word_wrap": true
 }
