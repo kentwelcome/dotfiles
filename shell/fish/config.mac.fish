@@ -4,6 +4,9 @@
 # Init configuration
 set fish_greeting ""
 
+# Set Go Path
+set GOPATH ~/.goenv/
+
 # Powerline-shell
 function fish_prompt
     ~/.powerline-shell.py $status --shell bare ^/dev/null

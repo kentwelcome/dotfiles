@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/primer.dark (SL).tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
@@ -16,6 +16,6 @@
 		"*.log",
 		"/Users/kent/Research/TrendMicro/VSAPI/9830/llvm/src/filter/95*"
 	],
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "Primer Dark.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
