@@ -11,7 +11,8 @@ set -x GOPATH ~/goenv/
 
 # Powerline-shell
 function fish_prompt
-   ~/.powerline-shell.py $status --shell bare ^/dev/null
+    #~/.powerline-shell.py $status --shell bare ^/dev/null
+    ~/goenv/bin/powerline-go -error $status -shell bare
 end
 
 function fish_right_prompt; end
