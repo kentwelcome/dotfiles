@@ -10,9 +10,11 @@ source ~/.bashrc > /dev/null
 set -x GOPATH ~/goenv/
 
 # Powerline-shell
-#function fish_prompt
-#    ~/.powerline-shell.py $status --shell bare ^/dev/null
-#end
+function fish_prompt
+   ~/.powerline-shell.py $status --shell bare ^/dev/null
+end
+
+function fish_right_prompt; end
 
 # set fish_function_path $fish_function_path "/usr/local/lib/python2.7/site-packages/powerline/bindings/fish/"
 # powerline-setup
