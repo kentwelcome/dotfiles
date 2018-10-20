@@ -1,4 +1,4 @@
-[submodule "tmux/tmux-powerline"]
+[submodule "kentwelcome/tmux-powerline"]
 	path = tmux/tmux-powerline
 	url = https://github.com/kentwelcome/tmux-powerline.git
 [submodule "vim/bundle/vundle"]
