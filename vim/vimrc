@@ -123,6 +123,8 @@ Bundle 'vim-scripts/fakeclip'
 Bundle 'vim-scripts/surround.vim'
 Bundle 'c9s/bufexplorer'
 Bundle 'dag/vim-fish'
+Plugin 'fatih/vim-go'
+Plugin 'editorconfig/editorconfig-vim'
  
 
 filetype plugin indent on     " required!
