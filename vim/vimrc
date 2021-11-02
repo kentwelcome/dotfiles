@@ -125,7 +125,7 @@ Bundle 'c9s/bufexplorer'
 Bundle 'dag/vim-fish'
 Plugin 'fatih/vim-go'
 Plugin 'editorconfig/editorconfig-vim'
- 
+Plugin 'tabnine/YouCompleteMe'
 
 filetype plugin indent on     " required!
  
