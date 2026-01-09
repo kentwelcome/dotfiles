@@ -7,3 +7,6 @@
 [submodule "shell/nvm-fish-wrapper"]
 	path = shell/nvm-fish-wrapper
 	url = https://github.com/passcod/nvm-fish-wrapper.git
+[submodule "tmux/tmux-powerline"]
+	path = tmux/tmux-powerline
+	url = https://github.com/erikw/tmux-powerline
