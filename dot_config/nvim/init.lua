@@ -409,4 +409,49 @@ require("lazy").setup({
 
   -- EditorConfig
   { "editorconfig/editorconfig-vim" },
+
+  -- GitHub Copilot
+  {
+    "github/copilot.vim",
+    event = "InsertEnter",
+    config = function()
+      vim.g.copilot_no_tab_map = true
+      -- Accept suggestion with Ctrl+J (avoid conflict with Tab completion)
+      vim.keymap.set("i", "<C-j>", 'copilot#Accept("\\<CR>")', {
+        expr = true,
+        replace_keycodes = false,
+        desc = "Copilot accept",
+      })
+      -- Navigate suggestions
+      vim.keymap.set("i", "<C-]>", "<Plug>(copilot-next)", { desc = "Copilot next suggestion" })
+      vim.keymap.set("i", "<C-[>", "<Plug>(copilot-previous)", { desc = "Copilot previous suggestion" })
+      -- Dismiss suggestion
+      vim.keymap.set("i", "<C-\\>", "<Plug>(copilot-dismiss)", { desc = "Copilot dismiss" })
+    end,
+  },
+
+  -- Copilot Chat
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      "github/copilot.vim",
+      "nvim-lua/plenary.nvim",
+    },
+    build = "make tiktoken",
+    keys = {
+      { "<leader>cc", "<cmd>CopilotChatToggle<CR>", desc = "Copilot Chat toggle" },
+      { "<leader>ce", "<cmd>CopilotChatExplain<CR>", mode = "v", desc = "Copilot explain selection" },
+      { "<leader>cr", "<cmd>CopilotChatReview<CR>", mode = "v", desc = "Copilot review selection" },
+      { "<leader>cf", "<cmd>CopilotChatFix<CR>", mode = "v", desc = "Copilot fix selection" },
+      { "<leader>ct", "<cmd>CopilotChatTests<CR>", mode = "v", desc = "Copilot generate tests" },
+    },
+    config = function()
+      require("CopilotChat").setup({
+        window = {
+          layout = "vertical",
+          width = 0.3,
+        },
+      })
+    end,
+  },
 })
