@@ -16,7 +16,7 @@ eval (/opt/homebrew/bin/brew shellenv)
 
 # Powerline-go prompt
 function fish_prompt
-    powerline-go -error $status --shell bare --modules "venv,user,ssh,cwd,perms,git,node,exit,root" -cwd-max-depth 3
+    powerline-go -error $status --shell bare --modules "venv,user,ssh,cwd,perms,git,exit,root" -cwd-max-depth 3
 end
 
 # nvm
