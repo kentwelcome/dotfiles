@@ -6,6 +6,10 @@ set fish_greeting ""
 
 set -g -x PATH /opt/homebrew/bin $PATH ~/.cargo/bin ~/go/bin
 alias ls 'ls -G'
+# code - open VS Code
+function code --wraps code --description 'Open VS Code'
+    /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code $argv
+end
 
 # Homebrew
 eval (/opt/homebrew/bin/brew shellenv)

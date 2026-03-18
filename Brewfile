@@ -14,6 +14,7 @@ brew "powerline-go"
 brew "git"
 brew "gh"
 brew "fzf"
+brew "tree-sitter-cli"
 
 # Fonts (required by powerline-go)
 cask "font-hack-nerd-font"

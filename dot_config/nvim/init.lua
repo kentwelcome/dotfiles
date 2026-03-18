@@ -192,23 +192,13 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
-      local ensure = {
-        "c", "cpp", "go", "lua", "vim", "vimdoc",
-        "javascript", "typescript", "python", "bash",
-        "json", "yaml", "html", "css", "markdown",
-      }
-      -- Install missing parsers
-      local installed = require("nvim-treesitter.install").install
-      for _, lang in ipairs(ensure) do
-        if not pcall(vim.treesitter.language.inspect, lang) then
-          installed(lang)
-        end
-      end
-      -- Enable treesitter highlighting for all buffers
-      vim.api.nvim_create_autocmd("FileType", {
-        callback = function()
-          pcall(vim.treesitter.start)
-        end,
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = {
+          "c", "cpp", "go", "lua", "vim", "vimdoc",
+          "javascript", "typescript", "python", "bash",
+          "json", "yaml", "html", "css", "markdown",
+        },
+        highlight = { enable = true },
       })
     end,
   },
