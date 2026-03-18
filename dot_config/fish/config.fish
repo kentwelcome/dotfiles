@@ -24,6 +24,10 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 
+# Default editor
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
 export PAGER="less -r"
 
 # Source local config for machine-specific settings and secrets
