@@ -12,9 +12,11 @@ Personal dotfiles for Kent Huang, managed with [chezmoi](https://www.chezmoi.io/
 
 ```
 dotfiles/
+├── Brewfile                         # Homebrew dependencies
 ├── dot_config/
 │   ├── fish/
-│   │   └── config.fish          → ~/.config/fish/config.fish
+│   │   ├── config.fish          → ~/.config/fish/config.fish
+│   │   └── fish_plugins         → ~/.config/fish/fish_plugins
 │   └── nvim/
 │       ├── init.lua             → ~/.config/nvim/init.lua
 │       └── lazy-lock.json       → ~/.config/nvim/lazy-lock.json
@@ -35,22 +37,37 @@ Chezmoi naming: `dot_` prefix maps to `.` (e.g., `dot_config/` → `~/.config/`)
 
 | File | Description |
 |------|-------------|
+| `Brewfile` | Homebrew dependencies (terminal essentials) |
 | `dot_config/nvim/init.lua` | NeoVim config with LSP, treesitter, telescope, nvim-cmp |
-| `dot_config/fish/config.fish` | Fish shell configuration |
+| `dot_config/fish/config.fish` | Fish shell with powerline-go prompt |
+| `dot_config/fish/fish_plugins` | Fisher plugin list (nvm.fish, bass) |
 | `dot_tmux.conf` | Tmux with vim-style navigation + TPM |
 
 ## Installation
 
 ```bash
+# 1. Install chezmoi and initialize
 brew install chezmoi
 chezmoi init https://github.com/kentwelcome/dotfiles.git
-chezmoi diff    # preview
-chezmoi apply   # apply
+
+# 2. Install dependencies from Brewfile
+brew bundle --file=$(chezmoi source-path)/Brewfile
+
+# 3. Preview and apply dotfiles
+chezmoi diff
+chezmoi apply
+
+# 4. Install fish plugins (run inside fish shell)
+fisher install
+
+# 5. Open nvim — lazy.nvim auto-installs plugins on first launch
+
+# 6. Open tmux — press prefix+I to install TPM plugins
 ```
 
-After applying:
-- Open `nvim` — lazy.nvim auto-installs plugins on first launch
-- Open `tmux` — press `prefix + I` to install TPM plugins
+### Machine-specific settings
+
+Create `~/.config/fish/local.fish` for secrets and machine-specific config (API keys, work tools, etc.). This file is sourced automatically by `config.fish` and should not be committed.
 
 ## Common Tasks
 
@@ -100,7 +117,11 @@ chezmoi cd                              # cd into source dir for git operations
 
 ## Conventions
 
+- Dependencies: Brewfile (terminal essentials only; install extras per-machine)
 - NeoVim plugins: lazy.nvim (Lua-native, lazy-loaded)
+- Fish plugins: fisher (plugin list in `fish_plugins`)
+- Fish prompt: powerline-go (installed via Homebrew)
 - Tmux plugins: TPM (no git submodules)
 - Symlinks: chezmoi (no manual deploy scripts)
+- Secrets: `~/.config/fish/local.fish` (never committed)
 - Indent: 4 spaces default, 2 spaces for Lua/JSON/YAML (see `.editorconfig`)

@@ -11,9 +11,11 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 ## Structure
 
 ```
+Brewfile                         # Homebrew dependencies
 dot_config/
 ├── fish/
-│   └── config.fish          → ~/.config/fish/config.fish
+│   ├── config.fish          → ~/.config/fish/config.fish
+│   └── fish_plugins         → ~/.config/fish/fish_plugins
 └── nvim/
     ├── init.lua             → ~/.config/nvim/init.lua
     └── lazy-lock.json       → ~/.config/nvim/lazy-lock.json
@@ -23,18 +25,28 @@ dot_tmux.conf                → ~/.tmux.conf
 ## Setup
 
 ```bash
-# Install chezmoi
+# 1. Install chezmoi and initialize
 brew install chezmoi
-
-# Initialize from this repo
 chezmoi init https://github.com/kentwelcome/dotfiles.git
 
-# Preview changes
-chezmoi diff
+# 2. Install dependencies from Brewfile
+brew bundle --file=$(chezmoi source-path)/Brewfile
 
-# Apply
+# 3. Preview and apply dotfiles
+chezmoi diff
 chezmoi apply
+
+# 4. Install fish plugins (run inside fish shell)
+fisher install
+
+# 5. Open nvim — lazy.nvim auto-installs plugins on first launch
+
+# 6. Open tmux — press prefix+I to install TPM plugins
 ```
+
+### Machine-specific settings
+
+Create `~/.config/fish/local.fish` for secrets and machine-specific config (API keys, work tools, etc.). This file is sourced automatically and should **not** be committed.
 
 ## NeoVim Plugins
 
