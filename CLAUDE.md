@@ -45,25 +45,15 @@ Chezmoi naming: `dot_` prefix maps to `.` (e.g., `dot_config/` → `~/.config/`)
 
 ## Installation
 
+One-liner for a new machine:
+
 ```bash
-# 1. Install chezmoi and initialize
-brew install chezmoi
-chezmoi init https://github.com/kentwelcome/dotfiles.git
-
-# 2. Install dependencies from Brewfile
-brew bundle --file=$(chezmoi source-path)/Brewfile
-
-# 3. Preview and apply dotfiles
-chezmoi diff
-chezmoi apply
-
-# 4. Install fish plugins (run inside fish shell)
-fisher install
-
-# 5. Open nvim — lazy.nvim auto-installs plugins on first launch
-
-# 6. Open tmux — press prefix+I to install TPM plugins
+bash <(curl -s https://raw.githubusercontent.com/kentwelcome/dotfiles/main/setup.sh)
 ```
+
+`setup.sh` handles: Homebrew install → chezmoi init → brew bundle → chezmoi apply → fisher plugins.
+
+After setup: open `nvim` (plugins auto-install), open `tmux` (`prefix+I` for TPM plugins).
 
 ### Machine-specific settings
 

@@ -22,27 +22,28 @@ dot_config/
 dot_tmux.conf                → ~/.tmux.conf
 ```
 
-## Setup
+## Quick Setup
 
 ```bash
-# 1. Install chezmoi and initialize
+bash <(curl -s https://raw.githubusercontent.com/kentwelcome/dotfiles/main/setup.sh)
+```
+
+After setup:
+1. Open `nvim` — plugins auto-install on first launch
+2. Open `tmux` — press `prefix+I` to install TPM plugins
+3. Create `~/.config/fish/local.fish` for machine-specific secrets
+
+<details>
+<summary>Manual step-by-step setup</summary>
+
+```bash
 brew install chezmoi
 chezmoi init https://github.com/kentwelcome/dotfiles.git
-
-# 2. Install dependencies from Brewfile
 brew bundle --file=$(chezmoi source-path)/Brewfile
-
-# 3. Preview and apply dotfiles
-chezmoi diff
 chezmoi apply
-
-# 4. Install fish plugins (run inside fish shell)
-fisher install
-
-# 5. Open nvim — lazy.nvim auto-installs plugins on first launch
-
-# 6. Open tmux — press prefix+I to install TPM plugins
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher && fisher update"
 ```
+</details>
 
 ### Machine-specific settings
 
