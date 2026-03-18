@@ -4,7 +4,7 @@
 # Init configuration
 set fish_greeting ""
 
-set -g -x PATH /opt/homebrew/bin $PATH ~/.cargo/bin ~/go/bin
+set -g -x PATH /opt/homebrew/bin $PATH ~/.cargo/bin ~/go/bin ~/.local/bin
 alias ls 'ls -G'
 # code - open VS Code
 function code --wraps code --description 'Open VS Code'
