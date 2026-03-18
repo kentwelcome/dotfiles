@@ -9,6 +9,10 @@ vim.opt.backspace = "2"
 vim.opt.history = 50
 vim.opt.ruler = true
 vim.opt.autoread = true
+-- Auto-reload files changed externally (e.g. by Claude Code)
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+    command = "silent! checktime",
+})
 vim.opt.number = true
 vim.opt.showcmd = true
 vim.opt.showmatch = true
@@ -422,7 +426,7 @@ require("lazy").setup({
       })
       -- Navigate suggestions
       vim.keymap.set("i", "<C-]>", "<Plug>(copilot-next)", { desc = "Copilot next suggestion" })
-      vim.keymap.set("i", "<C-[>", "<Plug>(copilot-previous)", { desc = "Copilot previous suggestion" })
+      vim.keymap.set("i", "<M-[>", "<Plug>(copilot-previous)", { desc = "Copilot previous suggestion" })
       -- Dismiss suggestion
       vim.keymap.set("i", "<C-\\>", "<Plug>(copilot-dismiss)", { desc = "Copilot dismiss" })
     end,
