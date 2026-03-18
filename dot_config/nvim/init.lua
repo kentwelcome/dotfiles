@@ -192,14 +192,22 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = {
-          "c", "cpp", "go", "lua", "vim", "vimdoc",
-          "javascript", "typescript", "python", "bash",
-          "json", "yaml", "html", "css", "markdown",
-        },
-        highlight = { enable = true },
+      -- Auto-install missing parsers when entering a buffer
+      local ensure = {
+        "c", "cpp", "go", "lua", "vim", "vimdoc",
+        "javascript", "typescript", "python", "bash",
+        "json", "yaml", "html", "css", "markdown",
+      }
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function()
+          pcall(vim.treesitter.start)
+        end,
       })
+      for _, lang in ipairs(ensure) do
+        if not pcall(vim.treesitter.language.inspect, lang) then
+          vim.cmd("TSInstall " .. lang)
+        end
+      end
     end,
   },
 
