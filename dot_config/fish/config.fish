@@ -4,7 +4,7 @@
 # Init configuration
 set fish_greeting ""
 
-set -g -x PATH /opt/homebrew/bin $PATH ~/.cargo/bin ~/go/bin ~/.local/bin
+set -g -x PATH $PATH ~/.cargo/bin ~/go/bin ~/.local/bin /Users/kent/.bun/bin /opt/homebrew/bin
 alias ls 'ls -G'
 # code - open VS Code
 function code --wraps code --description 'Open VS Code'
@@ -12,11 +12,25 @@ function code --wraps code --description 'Open VS Code'
 end
 
 # Homebrew
-eval (/opt/homebrew/bin/brew shellenv)
+set -gx HOMEBREW_PREFIX /opt/homebrew
+set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
+set -gx HOMEBREW_REPOSITORY /opt/homebrew
+fish_add_path -gP /opt/homebrew/bin /opt/homebrew/sbin
+set -q MANPATH; or set -gx MANPATH ''
+set -gx MANPATH /opt/homebrew/share/man $MANPATH
+set -gx INFOPATH /opt/homebrew/share/info $INFOPATH
 
 # Powerline-go prompt
 function fish_prompt
-    powerline-go -error $status --shell bare --modules "venv,user,ssh,cwd,perms,git,exit,root" -cwd-max-depth 3
+    set -l last_status $status
+    set -l modules "venv,user,ssh,cwd,perms,git,exit,root"
+    if set -q APP_SANDBOX_CONTAINER_ID
+        set modules "shell-var,$modules"
+        set -gx SAFEHOUSE "🔒"
+    else
+        set -e SAFEHOUSE
+    end
+    powerline-go -error $last_status --shell bare --modules $modules -shell-var SAFEHOUSE -shell-var-no-warn-empty -cwd-max-depth 3
 end
 
 # nvm
