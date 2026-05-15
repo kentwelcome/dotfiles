@@ -125,6 +125,14 @@ require("lazy").setup({
     end,
   },
 
+  -- Markdown rendering
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown" },
+    opts = {},
+  },
+
   -- Status line (replaces powerline/airline)
   {
     "nvim-lualine/lualine.nvim",
