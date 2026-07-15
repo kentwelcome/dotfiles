@@ -84,7 +84,7 @@ chezmoi cd                              # cd into source dir for git operations
 | Key | Action |
 |-----|--------|
 | `F3` | Toggle line numbers |
-| `F7` | Toggle file tree (nvim-tree) |
+| `F7` / `Space+e` | Toggle file tree (nvim-tree) |
 | `Space+ff` | Find files (telescope) |
 | `Space+fg` | Live grep (telescope) |
 | `Space+fb` | Buffers (telescope) |
