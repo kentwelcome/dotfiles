@@ -160,6 +160,7 @@ require("lazy").setup({
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+    cmd = { "NvimTreeOpen", "NvimTreeToggle" },
     keys = {
       { "<F7>", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file tree" },
       { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file tree" },
