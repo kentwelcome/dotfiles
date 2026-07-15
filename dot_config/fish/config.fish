@@ -4,7 +4,7 @@
 # Init configuration
 set fish_greeting ""
 
-set -g -x PATH $PATH ~/.cargo/bin ~/go/bin ~/.local/bin /Users/kent/.bun/bin /opt/homebrew/bin
+set -g -x PATH $PATH ~/.cargo/bin ~/go/bin ~/.local/bin /Users/kent/.bun/bin
 alias ls 'ls -G'
 # code - open VS Code
 function code --wraps code --description 'Open VS Code'
@@ -15,7 +15,7 @@ end
 set -gx HOMEBREW_PREFIX /opt/homebrew
 set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
 set -gx HOMEBREW_REPOSITORY /opt/homebrew
-fish_add_path -gP /opt/homebrew/bin /opt/homebrew/sbin
+fish_add_path -gPm /opt/homebrew/bin /opt/homebrew/sbin
 set -q MANPATH; or set -gx MANPATH ''
 set -gx MANPATH /opt/homebrew/share/man $MANPATH
 set -gx INFOPATH /opt/homebrew/share/info $INFOPATH
@@ -52,3 +52,10 @@ export PAGER="less -r"
 if test -f ~/.config/fish/local.fish
     source ~/.config/fish/local.fish
 end
+
+# pnpm
+set -gx PNPM_HOME "/Users/kent/Library/pnpm"
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+  set -gx PATH "$PNPM_HOME/bin" $PATH
+end
+# pnpm end
