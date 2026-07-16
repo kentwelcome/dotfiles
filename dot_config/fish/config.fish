@@ -1,24 +1,7 @@
+source "$__fish_config_dir/init.fish"
+
 # Fish Shell Configuration
 # Kent Huang
-
-# Init configuration
-set fish_greeting ""
-
-set -g -x PATH $PATH ~/.cargo/bin ~/go/bin ~/.local/bin /Users/kent/.bun/bin
-alias ls 'ls -G'
-# code - open VS Code
-function code --wraps code --description 'Open VS Code'
-    /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code $argv
-end
-
-# Homebrew
-set -gx HOMEBREW_PREFIX /opt/homebrew
-set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
-set -gx HOMEBREW_REPOSITORY /opt/homebrew
-fish_add_path -gPm /opt/homebrew/bin /opt/homebrew/sbin
-set -q MANPATH; or set -gx MANPATH ''
-set -gx MANPATH /opt/homebrew/share/man $MANPATH
-set -gx INFOPATH /opt/homebrew/share/info $INFOPATH
 
 # Powerline-go prompt
 function fish_prompt
@@ -34,12 +17,8 @@ function fish_prompt
 end
 
 # nvm
-nvm use v22 > /dev/null
-
-# pnpm
-set -gx PNPM_HOME "$HOME/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-    set -gx PATH "$PNPM_HOME" $PATH
+if type -q nvm; and nvm list v22 > /dev/null 2>&1
+    nvm use v22 > /dev/null
 end
 
 # Default editor
@@ -52,10 +31,3 @@ export PAGER="less -r"
 if test -f ~/.config/fish/local.fish
     source ~/.config/fish/local.fish
 end
-
-# pnpm
-set -gx PNPM_HOME "/Users/kent/Library/pnpm"
-if not string match -q -- "$PNPM_HOME/bin" $PATH
-  set -gx PATH "$PNPM_HOME/bin" $PATH
-end
-# pnpm end

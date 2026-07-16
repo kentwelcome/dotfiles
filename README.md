@@ -15,6 +15,7 @@ Brewfile                         # Homebrew dependencies
 dot_config/
 ├── fish/
 │   ├── config.fish          → ~/.config/fish/config.fish
+│   ├── init.fish            → ~/.config/fish/init.fish
 │   └── fish_plugins         → ~/.config/fish/fish_plugins
 └── nvim/
     ├── init.lua             → ~/.config/nvim/init.lua
